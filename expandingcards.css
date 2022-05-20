@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Work+Sans:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.penel {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    border-radius: 35px;
+    position: relative;
+    color: rgb(238, 233, 233);
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    transition: all 700ms ease-in;
+}
+
+.penel h2 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(41, 39, 39);
+    border-radius: 5px;
+}
+
+.penel.active {
+    flex: 5;
+}
+
+.penel.active h2 {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .penel:nth-of-type(4),
+    .penel:nth-of-type(5) {
+        display: none;
+    }
+
+}
